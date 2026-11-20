@@ -3,9 +3,18 @@
 실행: streamlit run app.py
 문구·수치·출처 수정은 content.py 에서.
 """
+import importlib
+
 import streamlit as st
 
-from common import inject_css
+import common
+import content
+
+# Streamlit Cloud는 수정된 보조 모듈을 다시 읽지 않고 예전 버전을 쓰는 경우가 있어,
+# 매 실행마다 content·common 을 새로 읽어 옵니다.
+importlib.reload(content)
+importlib.reload(common)
+from common import inject_css  # noqa: E402
 
 st.set_page_config(
     page_title="Water Co-Scientist | KISTI 협력 기획",
