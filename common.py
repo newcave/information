@@ -161,6 +161,26 @@ header[data-testid="stHeader"] {{ background:rgba(245,247,251,.92); backdrop-fil
 .rs .t {{ font-size:15px; font-weight:800; margin-top:2px; }}
 .rs .s {{ font-size:12.5px; color:var(--ink2); margin-top:2px; }}
 
+/* plan page */
+.lks {{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:10px 0 18px; }}
+.lk {{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; }}
+.lk b {{ display:block; font-size:24px; font-weight:800; letter-spacing:-.02em; color:var(--ink); }}
+.lk span {{ display:block; font-size:12.5px; color:var(--ink2); margin-top:4px; line-height:1.45; }}
+.story {{ position:relative; margin-top:10px; }}
+.st-row {{ display:grid; grid-template-columns:84px 22px 1fr; align-items:start; }}
+.st-y {{ font-size:13px; font-weight:800; color:var(--water); text-align:right; padding:12px 8px 0 0; }}
+.st-dot {{ position:relative; height:100%; }}
+.st-dot:before {{ content:""; position:absolute; left:10px; top:0; bottom:0; border-left:2px solid var(--line); }}
+.st-dot:after {{ content:""; position:absolute; left:4px; top:14px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid #9AA8B8; box-sizing:border-box; }}
+.st-row.both .st-dot:after {{ background:var(--water); border-color:var(--water); }}
+.st-row.bg .st-dot:after {{ border-style:dashed; }}
+.st-c {{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin:6px 0; }}
+.st-row.both .st-c {{ border:1.5px solid var(--water); background:#EEF5FD; }}
+.st-row.bg .st-c {{ background:#F5F7FB; }}
+.st-w {{ font-size:12px; font-weight:700; color:var(--muted); }}
+.st-t {{ font-size:14.5px; font-weight:700; color:var(--ink); margin-top:2px; }}
+[data-testid="stTabs"] button p {{ font-size:15px; font-weight:700; }}
+
 /* team page */
 .net-team svg {{ width:100%; height:auto; display:block; font-family:var(--font); }}
 .road.r3 {{ grid-template-columns:repeat(3,1fr); }}
@@ -187,6 +207,8 @@ header[data-testid="stHeader"] {{ background:rgba(245,247,251,.92); backdrop-fil
 
 @media (max-width: 860px) {{
   .people, .projects {{ grid-template-columns:1fr; }}
+  .lks {{ grid-template-columns:repeat(2,1fr); }}
+  .st-row {{ grid-template-columns:62px 22px 1fr; }}
   .road.r3 {{ grid-template-columns:1fr; }}
   .missions {{ grid-template-columns:repeat(3,1fr); }}
   .budgets {{ grid-template-columns:1fr; }}
