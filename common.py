@@ -161,7 +161,33 @@ header[data-testid="stHeader"] {{ background:rgba(245,247,251,.92); backdrop-fil
 .rs .t {{ font-size:15px; font-weight:800; margin-top:2px; }}
 .rs .s {{ font-size:12.5px; color:var(--ink2); margin-top:2px; }}
 
+/* team page */
+.net-team svg {{ width:100%; height:auto; display:block; font-family:var(--font); }}
+.road.r3 {{ grid-template-columns:repeat(3,1fr); }}
+.people {{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }}
+.pc {{ background:#fff; border:1px solid var(--line); border-top:4px solid var(--c); border-radius:16px; padding:16px 16px 14px; }}
+.pc .hd {{ display:flex; align-items:center; gap:10px; }}
+.av {{ width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:17px; color:#fff; background:var(--c); flex:none; }}
+.pc .nm {{ font-size:18px; font-weight:800; letter-spacing:-.01em; }}
+.pc .nm small {{ font-size:12.5px; font-weight:600; color:var(--muted); margin-left:4px; }}
+.pc .og {{ font-size:12.5px; color:var(--ink2); margin-top:1px; }}
+.tags {{ display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; }}
+.tg {{ font-size:11.5px; font-weight:600; color:var(--ink); background:color-mix(in srgb,var(--c) 12%,#fff); border:1px solid color-mix(in srgb,var(--c) 40%,#fff); border-radius:999px; padding:2px 8px; }}
+.hist {{ margin-top:12px; border-top:1px dashed var(--line); padding-top:10px; display:grid; grid-template-columns:38px 1fr; row-gap:6px; column-gap:6px; font-size:12.8px; line-height:1.45; }}
+.hist dt {{ font-weight:700; color:var(--muted); font-size:11.5px; padding-top:1px; }}
+.hist dd {{ margin:0; }}
+.chk {{ display:inline-block; font-size:10.5px; font-weight:700; color:#9A5B00; background:#FFF4DE; border-radius:6px; padding:0 5px; margin-left:4px; }}
+.projects {{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }}
+.pj {{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; }}
+.pj .t {{ font-size:16px; font-weight:800; }}
+.pj .d {{ font-size:13px; color:var(--ink2); margin-top:4px; line-height:1.5; }}
+.pj .who {{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }}
+.who span {{ font-size:12px; font-weight:700; border-radius:999px; padding:2px 9px; border:1.5px solid var(--c); color:var(--ink); background:#fff; }}
+.who span.lead {{ background:var(--c); color:#fff; }}
+
 @media (max-width: 860px) {{
+  .people, .projects {{ grid-template-columns:1fr; }}
+  .road.r3 {{ grid-template-columns:1fr; }}
   .missions {{ grid-template-columns:repeat(3,1fr); }}
   .budgets {{ grid-template-columns:1fr; }}
   .road {{ grid-template-columns:1fr; gap:10px; }} .road:before {{ display:none; }}

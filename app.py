@@ -28,6 +28,7 @@ nav = st.navigation(
     [
         st.Page("views/landscape.py", title="KISTI 협업 지형", icon=":material/hub:", default=True),
         st.Page("views/ai_scientist.py", title="AI 과학자 · 국가 미션", icon=":material/science:"),
+        st.Page("views/team.py", title="4인 협업 구상", icon=":material/groups:"),
     ],
     position="top",
 )
